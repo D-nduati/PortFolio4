@@ -1,0 +1,21 @@
+/* Contact.css */
+.contact-section {
+    background-color: var(--light-text-color);
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .contact-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-links a:hover {
+    color: var(--hover-color);
+  }

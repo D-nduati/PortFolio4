@@ -1,45 +1,49 @@
-import React from 'react';
-import { Layout ,Menu} from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import './styles/Navbar.css';
 
-const {Header} = Layout;
-function NavBar() {
-    const items1 = [
-        {
-            key: '1',
-            label:'Profile'
-        },
-        {
-            key: '2',
-            label:'About'
-        },
-        {
-            key: '3',
-            label:'Skills'
-        },
-        {
-            key: '4',
-            label:'Projects'
-        },
-        {
-            key: '4',
-            label:'Contacts'
-        }
-    ]
+const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobile(!isMobile);
+  };
+
+  // Change navbar color on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <Header>
-          <Menu
-          theme="light"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          items={items1}
-          style={{
-            flex: 1,
-            minWidth: 0,
-          }}
-        />
-    </Header>
-  )
-}
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-brand">Your Name</div>
+      <div className={`navbar-links ${isMobile ? 'active' : ''}`}>
+        <Link to="home" smooth={true} onClick={() => setIsMobile(false)}>Home</Link>
+        <Link to="about" smooth={true} onClick={() => setIsMobile(false)}>About</Link>
+        <Link to="experience" smooth={true} onClick={() => setIsMobile(false)}>Experience</Link>
+        <Link to="projects" smooth={true} onClick={() => setIsMobile(false)}>Projects</Link>
+        <Link to="resume" smooth={true} onClick={() => setIsMobile(false)}>Resume</Link>
+        <Link to="contact" smooth={true} onClick={() => setIsMobile(false)}>Contact</Link>
+      </div>
+      <a href="/path/to/resume.pdf" download className="resume-download-button">Download Resume</a>
+      <div className="hamburger" onClick={toggleMobileMenu}>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
+    </nav>
+  );
+};
 
-export default NavBar;
+export default Navbar;

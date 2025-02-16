@@ -1,0 +1,59 @@
+/* Home.css */
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
+  color: var(--light-text-color);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease;
+}
+
+.floating-button {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
