@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-brand">Your Name</div>
+      <div className="navbar-brand">David Nduati</div>
       <div className={`navbar-links ${isMobile ? 'active' : ''}`}>
         <Link to="home" smooth={true} onClick={() => setIsMobile(false)}>Home</Link>
         <Link to="about" smooth={true} onClick={() => setIsMobile(false)}>About</Link>

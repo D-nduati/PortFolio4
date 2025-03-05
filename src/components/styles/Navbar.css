@@ -1,4 +1,12 @@
-/* Navbar.css */
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --hover-color: #ff7e5f;
+  --light-text-color: #ffffff;
+  --text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 30px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -7,20 +15,25 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: transparent;
-  transition: background-color 0.3s ease, padding 0.3s ease;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--light-text-color);
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar.scrolled {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--hover-color));
   padding: 10px 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--light-text-color);
+  text-shadow: var(--text-shadow);
+  transition: transform 0.3s ease;
 }
 
 .navbar-links {
@@ -34,10 +47,13 @@
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
 }
 
 .navbar-links a:hover {
   color: var(--hover-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .resume-download-button {
@@ -46,26 +62,39 @@
   padding: 8px 16px;
   border-radius: var(--border-radius);
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .resume-download-button:hover {
   background-color: var(--hover-color);
   color: var(--light-text-color);
+  transform: translateY(-3px);
 }
 
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  gap: 5px;
 }
 
 .hamburger .line {
-  width: 25px;
+  width: 30px;
   height: 3px;
   background-color: var(--light-text-color);
-  margin: 4px 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Mobile Responsive */
@@ -80,25 +109,20 @@
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    padding: 20px;
   }
 
   .navbar-links.active {
     transform: translateX(0);
   }
 
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
   .hamburger {
     display: flex;
   }
-
-  .hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .hamburger.active .line:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
 }
+
+
