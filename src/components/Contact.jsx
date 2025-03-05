@@ -5,9 +5,10 @@ const Contact = () => {
     <section id="contact" className="contact-section">
       <h2>Contact Me</h2>
       <div className="contact-links">
-        <a href="mailto:youremail@example.com">Email</a>
-        <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-        <a href="https://github.com/yourusername">GitHub</a>
+      <a href="mailto:davidnduati78@gmail.com?subject=Hello&body=I wanted to reach out...">Email</a>
+
+        <a href="https://linkedin.com/in/david-nduati">LinkedIn</a>
+        <a href="https://github.com/D-nduati">GitHub</a>
       </div>
     </section>
   );
