@@ -33,10 +33,14 @@ const Navbar = () => {
         <Link to="about" smooth={true} onClick={() => setIsMobile(false)}>About</Link>
         <Link to="experience" smooth={true} onClick={() => setIsMobile(false)}>Experience</Link>
         <Link to="projects" smooth={true} onClick={() => setIsMobile(false)}>Projects</Link>
-        <Link to="resume" smooth={true} onClick={() => setIsMobile(false)}>Resume</Link>
+        <Link to="resume" smooth={true} onClick={() => setIsMobile(false)}>
+        <a href="resume.pdf" download="David Nduati Resume.pdf" className="resume-button floating-button">
+  Download Resume
+</a>
+</Link>
         <Link to="contact" smooth={true} onClick={() => setIsMobile(false)}>Contact</Link>
       </div>
-      <a href="/path/to/resume.pdf" download className="resume-download-button">Download Resume</a>
+      <a href="resume.pdf" download className="resume-download-button">Download Resume</a>
       <div className="hamburger" onClick={toggleMobileMenu}>
         <div className="line"></div>
         <div className="line"></div>
