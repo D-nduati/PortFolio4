@@ -29,18 +29,13 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-brand">David Nduati</div>
       <div className={`navbar-links ${isMobile ? 'active' : ''}`}>
-        <Link to="home" smooth={true} onClick={() => setIsMobile(false)}>Home</Link>
-        <Link to="about" smooth={true} onClick={() => setIsMobile(false)}>About</Link>
-        <Link to="experience" smooth={true} onClick={() => setIsMobile(false)}>Experience</Link>
-        <Link to="projects" smooth={true} onClick={() => setIsMobile(false)}>Projects</Link>
-        <Link to="resume" smooth={true} onClick={() => setIsMobile(false)}>
-        <a href="resume.pdf" download="David Nduati Resume.pdf" className="resume-button floating-button">
-  Download Resume
-</a>
-</Link>
-        <Link to="contact" smooth={true} onClick={() => setIsMobile(false)}>Contact</Link>
+        <Link to="/home" smooth={true} onClick={() => setIsMobile(false)}>Home</Link>
+        <Link to="/about" smooth={true} onClick={() => setIsMobile(false)}>About</Link>
+        <Link to="/experience" smooth={true} onClick={() => setIsMobile(false)}>Experience</Link>
+        <Link to="/projects" smooth={true} onClick={() => setIsMobile(false)}>Projects</Link>
+        <Link to="/resume" smooth={true} onClick={() => setIsMobile(false)}>Download Resume</Link>
+        <Link to="/contact" smooth={true} onClick={() => setIsMobile(false)}>Contact</Link>
       </div>
-      <a href="resume.pdf" download className="resume-download-button">Download Resume</a>
       <div className="hamburger" onClick={toggleMobileMenu}>
         <div className="line"></div>
         <div className="line"></div>
