@@ -3,7 +3,7 @@ import './styles/Experience.css'
 
 const Experience = () => {
   return (
-    <section id="experience" className="experience-section">
+    <section id="Experience" className="Experience-section">
       <h2>Experience</h2>
       <div className="timeline">
         <div className="timeline-item">
@@ -22,7 +22,7 @@ const Experience = () => {
             <li>Enhanced user engagement through modern UI/UX design.</li>
           </ul>
         </div>
-        {/* Add more experiences */}
+        {/* Add more Experiences */}
       </div>
     </section>
   );

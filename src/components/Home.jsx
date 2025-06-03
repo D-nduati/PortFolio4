@@ -3,10 +3,12 @@ import './styles/Home.css';
 
 const Home = () => {
   return (
-    <section id="home" className="home-section">
+    <section id="home" className="home-section"
+    
+    >
       <div className="home-content">
         <div className="profile-header">
-          <h1 className="animated-text">David Nduati</h1>
+          {/* <h1 className="animated-text">David Nduati</h1> */}
           <div className="title-container">
             <span className="job-title">Full-Stack Developer</span>
             <span className="job-divider">|</span>
