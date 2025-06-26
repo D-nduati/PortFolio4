@@ -49,6 +49,14 @@ const Navbar = () => {
         >
           About
         </NavLink>
+        <NavLink 
+          to="blogs" 
+          smooth={true} 
+          className="nav-link"
+          onClick={closeMobileMenu}
+        >
+          Blogs
+        </NavLink>
 
         <NavLink 
           to="/experience" 

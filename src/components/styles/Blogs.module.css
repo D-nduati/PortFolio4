@@ -1,0 +1,61 @@
+/* Blogs.css */
+.container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 80px; 
+    padding: 2rem;
+  }
+  
+  .post {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .post h6 {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-weight: 600; /* Makes heading more visible */
+  }
+  
+  .post p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #3182ce;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  
+  .btn:hover {
+    background: #2c5282;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .post {
+      background: #2d3748;
+    }
+    .post h6 {
+      color: #f7fafc;
+    }
+    .post p {
+      color: #e2e8f0;
+    }
+  }
