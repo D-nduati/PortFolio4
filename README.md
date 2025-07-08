@@ -3,7 +3,7 @@
 
 <p><strong>🚀 Live Demo:</strong> 
   <a href="https://david-porfolio-s0d2.onrender.com/" target="_blank">
-    https://david-porfolio-s0d2.onrender.com/
+   Online Portfolio
   </a>
 </p>
 
@@ -23,13 +23,6 @@
 </ul>
 
 <h3>🖼️ Preview</h3>
-<p>
-  <img 
-    src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/assets/portfolio-preview.png" 
-    alt="Portfolio Preview" 
-    width="100%" 
-  />
-</p>
 <!-- Replace the above image URL with the correct path once you upload the screenshot to your repo -->
 
 <h3>🛠️ Tech Stack</h3>
